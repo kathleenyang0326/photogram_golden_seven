@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get("/photos",{:controller=>"photos",:action=>"index"})
 
 get("/photos/:the_id_number",{:controller=>"photos",:action=>"show"})
 

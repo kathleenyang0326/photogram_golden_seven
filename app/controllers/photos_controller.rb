@@ -8,4 +8,10 @@ id_number=params["the_id_number"]
   @created_at=p.created_at
   render("show.html.erb")
 end
+
+def index
+  @all_photos=Photo.all
+  render("index.html.erb")
+end
+
 end
