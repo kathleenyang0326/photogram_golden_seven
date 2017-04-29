@@ -11,8 +11,9 @@ end
 def update_row
   p=Photo.find(params[:the_id])
   p.source=params[:the_source]
-  p.caption=params [:the_caption]
-redirect_to=("/photos")
+  p.caption=params[:the_caption]
+  p.save
+redirect_to("/photos/:the_id")
 end
 
 
@@ -44,12 +45,13 @@ def index
   @all_photos=Photo.all.order({:created_at=>:desc})
   render("index.html.erb")
 end
-def update_row
+
+
+def destroy
   p=Photo.find(params[:the_id])
-  p.source=params["the_source"]
-  p.caption=params["the_caption"]
-  p.save
-redirect_to("/photos/:the_id")
+  p.destroy
+  redirect_to("photos")
+
 end
 
 
