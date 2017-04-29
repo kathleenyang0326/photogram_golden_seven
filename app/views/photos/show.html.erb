@@ -5,11 +5,11 @@
   </p>
 
 
-<img src="<%= @the_image_url %>"/>
+<img src="<%= @the_image_url %>">
 
-<p>about 1 hour ago</p>
+
 <p><%= time_ago_in_words (@created_at)%> ago</p>
 
 <a href="/photos">Go back</a>
-<a href="#">Edit</a>
-<a href="#">Delete</a>
+<a href="/photos/<%=@photo.id %>/edit">Edit</a>
+<a href="/delete_photo/<%=@photo.id %>">Delete</a>
