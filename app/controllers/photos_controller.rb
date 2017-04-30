@@ -13,7 +13,7 @@ def update_row
   p.source=params[:the_source]
   p.caption=params[:the_caption]
   p.save
-redirect_to("/photos/:the_id")
+redirect_to("/photos/"+params[:the_id])
 end
 
 
@@ -50,7 +50,7 @@ end
 def destroy
   p=Photo.find(params[:the_id])
   p.destroy
-  redirect_to("photos")
+  redirect_to("/photos")
 
 end
 
