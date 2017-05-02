@@ -8,6 +8,7 @@ get("/update_photos/:the_id",{:controller=>"photos",:action=>"update_row"})
 get("/photos/new",{:controller=>"photos",:action=>"new_form"})
 
 #READ
+get("/",{:controller=>"photos",:action=>"index"})
   get("/photos",{:controller=>"photos",:action=>"index"})
 
 

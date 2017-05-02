@@ -14,6 +14,7 @@ def update_row
   p.caption=params[:the_caption]
   p.save
 redirect_to("/photos/"+params[:the_id])
+# redirect_to("/photos/#{p.id}")
 end
 
 
